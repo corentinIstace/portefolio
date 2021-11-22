@@ -1,0 +1,1 @@
+function navbar(){let l=document.getElementById("navbar");"block"===l.style.display?l.style.display="none":l.style.display="block",console.log("ok")}navbar();
