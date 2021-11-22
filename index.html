@@ -9,24 +9,26 @@
     <title>Corentin Istace - Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About me</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-        <div id="link">
-            <i class="fas fa-envelope"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-github"></i>
-        </div>
-    </header>
     <main>
         <section id="home">
+            <header>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- <a href="javascript:void(0)" id="icon" onclick="navbar()"><i class="fa fa-bars"></i></a> -->
+                <div id="link">
+                    <hr class="vertical">
+                    <a href="https://www.facebook.com/corentin.istace.7/" target="blank"><i class="social fab fa-facebook-square"></i></a>
+                    <a href="https://www.linkedin.com/in/corentin-istace/" target="blank"><i class="social fab fa-linkedin"></i></a>
+                    <a href="https://github.com/corentinIstace" target="blank"><i class="social fab fa-github"></i></a>
+                    <hr class="vertical">
+                </div>
+            </header>
             <div id="home-title">
                 <h1>Corentin Istace</h1>
                 <h2>A motivate junior Front-End web developer</h2>
@@ -34,63 +36,68 @@
             <button id="home-button"><a href="#contact">CALL ME !</a></button>
         </section>
 
-        <section class="part about">
-            <div class="div-title">
+        <section class="part" id="about">
+            <div class="part-title">
                 <h3>About me ~</h3>
             </div>
             <p>text sur moi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aliquid dicta aliquam quidem possimus magni quos quae culpa quas? Modi dicta, sint est sequi totam quasi tempora optio inventore autem?</p>
         </section>
 
-        <section class="part projects">
-            <div class="div-title">
+        <section class="part" id="projects">
+            <div class="part-title">
                 <h3>Projects ~</h3>
             </div>
-            <article class="project project1">
-                <h3 class="project-title">Happy Street</h3>
-                <a href="">See this project.</a>
-                <P>Made with HTML - CSS - Javascript</P>
-                
-            </article>
-            <article class="project project2">
-                <h3 class="project-title">Dj's project</h3>
-                <a href="">See this project.</a>
-                <P>Made with HTML - CSS </P>
-                
-            </article>
-            <article class="project project3">
-                <h3 class="project-title">This portfolio</h3>
-                <a href="">See this project.</a>
-                <P>Made with HTML - Sass - Javascript - Gulp</P>
-                
-            </article>
-            <article class="project project4">
-                <h3 class="project-title">Random number game</h3>
-                <a href="">See this project.</a>
-                <P>Made with HTML - CSS - Javascript</P>
-
-            </article>
+            <div id="projects-container">
+                <article class="project project1">
+                    <h3 class="project-title">Dj's project</h3>
+                    <a href="">See this project.</a>
+                    <P>Made with HTML - CSS </P>   
+                </article>
+                <article class="project project2">
+                    <h3 class="project-title">This portfolio</h3>
+                    <a href="">See this project.</a>
+                    <P>Made with HTML - Sass - Javascript - Gulp</P>   
+                </article>
+                <article class="project project3">
+                    <h3 class="project-title">Happy Street</h3>
+                    <a href="">See this project.</a>
+                    <P>Made with HTML - CSS - Javascript</P>  
+                </article>
+                <article class="project project4">
+                    <h3 class="project-title">weather app</h3>
+                    <a href="">See this project.</a>
+                    <P>Made with React</P>   
+                </article>
+                <article class="project project5">
+                    <h3 class="project-title">Random number game</h3>
+                    <a href="">See this project.</a>
+                    <P>Made with HTML - CSS - Javascript</P>   
+                </article>
+            </div>
         </section>
-
-        <section class="part contact">
-            <div class="div-title">
+            
+        <section class="part" id="contacts">
+            <div class="part-title">
                 <h3>Contact ~</h3>
             </div>
-            <article class="contact-box">
-                <h4>E-mail <i class="fas fa-envelope"></i></h4>
-                <a href="mailto:corentinistace1@gmail.com" target="blank">corentinistace1@gmail.com</a>
-            </article>
-            <article class="contact-box">
-                <h4>Linkedin <i class="fab fa-linkedin"></i></h4>
-                <a href="https://www.linkedin.com/in/corentin-istace/">Istace Corentin</a>
-            </article>
-            <article class="contact-box">
-                <h4>Phone <i class="fas fa-phone-square-alt"></i></h4>
-                <a href="tel:+32495848128">+32 495/84.81.28</a>
-            </article>
-            <article class="contact-box">
-                <h4>Github <i class="fab fa-github"></i></h4>
-                <a href="https://github.com/corentinIstace">corentinIstace</a>
-            </article>
+            <div id="contacts-container">
+                <article class="contact-box">
+                    <h4>E-mail <i class="fas fa-envelope"></i></h4>
+                    <a href="mailto:corentinistace1@gmail.com" target="blank">corentinistace1@gmail.com</a>
+                </article>
+                <article class="contact-box">
+                    <h4>Linkedin <i class="fab fa-linkedin"></i></h4>
+                    <a href="https://www.linkedin.com/in/corentin-istace/">Istace Corentin</a>
+                </article>
+                <article class="contact-box">
+                    <h4>Phone <i class="fas fa-phone-square-alt"></i></h4>
+                    <a href="tel:+32495848128">+32 495/84.81.28</a>
+                </article>
+                <article class="contact-box">
+                    <h4>Github <i class="fab fa-github"></i></h4>
+                    <a href="https://github.com/corentinIstace">corentinIstace</a>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
@@ -98,5 +105,6 @@
             <p><i class="far fa-copyright"></i> made by Corentin Istace</p>
         </div>
     </footer>
+    <script src="./gulp/concat.js?rs=123"></script>
 </body>
 </html>
