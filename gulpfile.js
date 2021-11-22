@@ -8,7 +8,7 @@ const replace = require ('gulp-replace');
 const sass = require ('gulp-sass')(require('node-sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require ('gulp-uglify');
-// const imagemin = import('gulp-imagemin');
+const webp = require('gulp-webp');
 
 const files = {
     scssPath: 'scss/**/*.scss',
@@ -32,16 +32,13 @@ function jstask(){
         .pipe(uglify())
         .pipe(dest('gulp'));
 }
-
-// function imgTask(){
-//     return gulp.src(files.imgPath)
-//         .pipe(imagemin([
-//             imagemin.mozjpeg({quality: 75, progressive: true}),
-//             imagemin.optipng({optimizationLevel: 5}),
-//         ]))
-//         .pipe(gulp.dest('gulp/img'));
-// }
-
+ 
+function imgTask(){
+    return gulp.src(files.imgPath)
+        .pipe(webp({quality: 100}))
+        .pipe(gulp.dest('gulp/img'))
+}
+ 
 const rString = new Date().getTime();
 function cacheBustTask(){
     return src(['index.html'])
@@ -53,13 +50,13 @@ function watchTask(){
     watch([files.scssPath, files.JsPath, files.imgPath],
     parallel(scssTask, jstask));
 
-    // watch([files.imgPath], 
-    // series(imgTask));
+    watch([files.imgPath], 
+    series(imgTask));
 }
 
 exports.default = series(
     parallel(scssTask, jstask),
-    // imgTask,
+    imgTask,
     cacheBustTask,
     watchTask
 );

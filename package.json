@@ -29,6 +29,10 @@
     "node-sass": "^6.0.1"
   },
   "dependencies": {
-    "gulp-imagemin": "^8.0.0"
+    "gulp-image": "^6.2.1",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^6.0.0"
   }
 }
