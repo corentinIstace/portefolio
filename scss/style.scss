@@ -5,13 +5,78 @@
     src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 }
 body{
-    background-color: rgba($color: #272424af, $alpha: 1.0);
+    background-color: rgba($color: #27242400, $alpha: 1.0);
     color: white;
     margin: 0px;
 }
 
+header {
+    overflow: hidden;
+    position: relative;
+    margin: 25px 50% 0px 0px;
+    ul {
+        // display: block;
+        padding-left: 5rem;
+        display: flex;
+        li {
+            flex-direction: row;
+            list-style-type: none;
+            padding: 14px 25px;
+            font-size: 34px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: rgb(241, 218, 12);
+        }
+    }
+    #link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 500px;
+        left: 15px;
+
+        hr.vertical{
+            width: 2px;
+            height: 120px;
+            color: white;
+            border-right: 1px dashed white;
+            border-top: 0;
+            border-left: 0;
+            border-bottom: 0;
+        }
+    }
+    .social{
+        font-size: 30px;
+        margin: 10px 15px;
+    }
+    .social:hover{
+        color: rgb(241, 218, 12);
+    }
+}    
+// #navbar{
+//     background-color: rgba(79,91,102,0.3);
+//     z-index: 1;
+// }    
+#icon{
+    font-size: 25px;
+    position: fixed;
+    right: 30px;
+    top: 45px;
+    padding: 20px 30px;
+    color:yellow;
+    }
+#icon :active{
+    color:rgb(241, 169, 12);
+}
 #home{
-    background-image: url("img/nature2.jpg");
+    background: center bottom no-repeat url("../gulp/img/nature2.webp");
+    z-index: 0;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -25,31 +90,62 @@ body{
     h1{
         font-family: 'Raleway', sans-serif;
         text-align: center;
-        font-size: 3em;
+        padding-top: 10%;
+        font-size: 4em;
     }
     h2{
-        font-family: 'Merienda', sans-serif;
         text-align: center;
     }
 }
 .part{
-    padding: 30px 60px;
+    padding: 30px 90px;
 }
-.div-title{
+.part-title{
     color: #4f5b66;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+#projects-container{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 500px);
+}
+.project{
+    text-align: center;
+    background-color: #292b2e;
+    border:2px solid rgb(241, 169, 12);
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    h3{
+        font-size: 2em;
+    }
+}
+.project:hover{
+    transform: translate(20px,-20px);
+    box-shadow: 0px 0px 20px 10px #dcdcdc;
+}
+#contacts-container{
+    display: flex;
+    justify-content: space-evenly;
 }
 .contact-box{
+    background-color: #292b2e;
     text-align: center;
-    border-right: 5px solid rgb(241, 169, 12);
-    border-top: 2px solid rgb(241, 169, 12);
-    border-bottom: 5px solid rgb(241, 169, 12);
-    border-left: 2px solid rgb(241, 169, 12);
+    width: 250px;
+    padding: 15px 0px;
+    border-right: 2px solid rgb(241, 169, 12);
+    border-top: 0.5px solid rgb(241, 169, 12);
+    border-bottom: 2px solid rgb(241, 169, 12);
+    border-left: 0.5px solid rgb(241, 169, 12);
     border-radius: 45px 0px 45px 0px;    
     h4{
         color: #4f5b66;
+        margin-top: 5px;
     }
     svg{
-        color:black;
+        color:rgb(98, 13, 155);
     }
     a{
         color: white;
