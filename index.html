@@ -14,7 +14,7 @@
             <header>
                 <nav id="navbar">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <!-- <li><a href="#home">Home</a></li> -->
                         <li><a href="#about">About me</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -33,14 +33,17 @@
                 <h1>Corentin Istace</h1>
                 <h2>A motivate junior Front-End web developer</h2>
             </div>
-            <button id="home-button"><a href="#contact">CALL ME !</a></button>
+            <button id="home-button"><a href="#contact">Call me </a></button>
         </section>
 
         <section class="part" id="about">
             <div class="part-title">
                 <h3>About me ~</h3>
             </div>
-            <p>text sur moi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aliquid dicta aliquam quidem possimus magni quos quae culpa quas? Modi dicta, sint est sequi totam quasi tempora optio inventore autem?</p>
+            <div id="about-container">
+                <img src="./gulp/img/linkedin.webp" alt="photo de moi">
+                <p>text sur moi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aliquid dicta aliquam quidem possimus magni quos quae culpa quas? Modi dicta, sint est sequi totam quasi tempora optio inventore autem?</p>
+            </div>
         </section>
 
         <section class="part" id="projects">
@@ -52,52 +55,92 @@
                     <h3 class="project-title">Dj's project</h3>
                     <a href="">See this project.</a>
                     <P>Made with HTML - CSS </P>   
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/css3-01.svg" alt="svg du logo css non-officiel">
+                    </div>
                 </article>
                 <article class="project project2">
                     <h3 class="project-title">This portfolio</h3>
                     <a href="">See this project.</a>
                     <P>Made with HTML - Sass - Javascript - Gulp</P>   
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/css3-01.svg" alt="svg du logo css non-officiel">
+                        <img class="svg" src="./gulp/img/javascript.svg" alt="svg du logo CSS  non-officiel">
+                    </div>
                 </article>
+
                 <article class="project project3">
                     <h3 class="project-title">Happy Street</h3>
                     <a href="">See this project.</a>
                     <P>Made with HTML - CSS - Javascript</P>  
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/css3-01.svg" alt="svg du logo css non-officiel">
+                        <img class="svg" src="./gulp/img/javascript.svg" alt="svg du logo CSS  non-officiel">
                 </article>
                 <article class="project project4">
                     <h3 class="project-title">weather app</h3>
                     <a href="">See this project.</a>
                     <P>Made with React</P>   
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/css3-01.svg" alt="svg du logo css non-officiel">
+                        <img class="svg" src="./gulp/img/javascript.svg" alt="svg du logo CSS  non-officiel">
+                    </div>
                 </article>
                 <article class="project project5">
                     <h3 class="project-title">Random number game</h3>
                     <a href="">See this project.</a>
                     <P>Made with HTML - CSS - Javascript</P>   
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/css3-01.svg" alt="svg du logo css non-officiel">
+                        <img class="svg" src="./gulp/img/javascript.svg" alt="svg du logo CSS  non-officiel">
+                    </div>
+                </article>
+                <article class="project project6">
+                    <h3 class="project-title">Tree Lidge Game</h3>
+                    <a href="">See this project.</a>
+                    <P>Mern project</P>   
+                    <div class="items">
+                        <img class="svg" src="./gulp/img/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <img class="svg" src="./gulp/img/javascript.svg" alt="svg du logo CSS  non-officiel">
+                    </div>
                 </article>
             </div>
         </section>
-            
-        <section class="part" id="contacts">
+        
+        <section class="part" id="contact">
             <div class="part-title">
                 <h3>Contact ~</h3>
             </div>
-            <div id="contacts-container">
-                <article class="contact-box">
-                    <h4>E-mail <i class="fas fa-envelope"></i></h4>
-                    <a href="mailto:corentinistace1@gmail.com" target="blank">corentinistace1@gmail.com</a>
-                </article>
-                <article class="contact-box">
-                    <h4>Linkedin <i class="fab fa-linkedin"></i></h4>
-                    <a href="https://www.linkedin.com/in/corentin-istace/">Istace Corentin</a>
-                </article>
-                <article class="contact-box">
-                    <h4>Phone <i class="fas fa-phone-square-alt"></i></h4>
-                    <a href="tel:+32495848128">+32 495/84.81.28</a>
-                </article>
-                <article class="contact-box">
-                    <h4>Github <i class="fab fa-github"></i></h4>
-                    <a href="https://github.com/corentinIstace">corentinIstace</a>
-                </article>
-            </div>
+            <section id="contacts-container">
+                <div id="contacts-container-left">
+                    <article class="contact-box">
+                        <h4>E-mail <i class="fas fa-envelope"></i></h4>
+                        <a href="mailto:corentinistace1@gmail.com" target="blank">corentinistace1@gmail.com</a>
+                    </article>
+                    <article class="contact-box">
+                        <h4>Linkedin <i class="fab fa-linkedin"></i></h4>
+                        <a href="https://www.linkedin.com/in/corentin-istace/">Istace Corentin</a>
+                    </article>
+                    <article class="contact-box">
+                        <h4>Phone <i class="fas fa-phone-square-alt"></i></h4>
+                        <a href="tel:+32495848128">+32 495/84.81.28</a>
+                    </article>
+                    <article class="contact-box">
+                        <h4>Github <i class="fab fa-github"></i></h4>
+                        <a href="https://github.com/corentinIstace">corentinIstace</a>
+                    </article>
+                </div>
+                <div id="contacts-container-right">
+                    <a href="https://www.facebook.com/corentin.istace.7/" target="blank"><i class="social fab fa-facebook-square"></i></a>
+                    <a href="https://www.linkedin.com/in/corentin-istace/" target="blank"><i class="social fab fa-linkedin"></i></a>
+                    <a href="https://github.com/corentinIstace" target="blank"><i class="social fab fa-github"></i></a>       
+                </div>
+            </section>
         </section>
     </main>
     <footer>
