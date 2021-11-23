@@ -58,5 +58,5 @@ exports.default = series(
     parallel(scssTask, jstask),
     imgTask,
     cacheBustTask,
-    watchTask
+    // watchTask
 );
