@@ -118,15 +118,15 @@ header {
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 500px);
-    grid-template-rows: repeat(3, 500px);
+    grid-template-rows: repeat(2, 500px);
 }
 .project{
     text-align: center;
     background-color: #292b2e;
     border:2px solid rgb(70, 68, 66);
     border-radius: 10px;
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 450px;
     h3{
         font-size: 2em;
     }
@@ -186,7 +186,27 @@ header {
 
 #contacts-container-right{
     text-align: center;
-    padding-top: 240px;
+    h3{
+        font-size: 2.5em;
+    }
+}
+#contacts-container-right-button{
+    display: flex;
+    button{
+        margin: auto;
+        background-color:rgb(98, 13, 155);
+        width: 150px;
+        height: 50px;
+        border: 1px, solid gray;
+        border-radius: 50px;
+    
+        a{
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
 }
 footer{
     text-align: center;
