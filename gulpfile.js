@@ -9,8 +9,6 @@ const sass = require ('gulp-sass')(require('node-sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require ('gulp-uglify');
 const webp = require('gulp-webp');
-const validator = require('gulp-html');
-
 
 const files = {
     htmlPath:"index.html",
@@ -29,12 +27,6 @@ function scssTask(){
     );
 }
 
-function htmlTask(){
-  return gulp.src(files.htmlPath)
-    .pipe(validator())
-    .pipe(gulp.dest('gulp/index.html'));
-};
-
 function jstask(){
     return src (files.JsPath)
         .pipe(concat('concat.js'))
@@ -52,20 +44,20 @@ const rString = new Date().getTime();
 function cacheBustTask(){
     return src(['index.html'])
         .pipe(replace(/cb=\d+/g, 'rs=' + rString))
-        .pipe(dest('.'))
+        .pipe(dest('gulp/.'))
 }
 
 function watchTask(){
-    watch([files.htmlPath, files.scssPath, files.JsPath, files.imgPath],
-    parallel(htmlTask, scssTask, jstask));
+    watch([files.scssPath, files.JsPath, files.imgPath],
+    parallel(scssTask, jstask));
 
     watch([files.imgPath], 
     series(imgTask));
 }
 
 exports.default = series(
-    parallel(htmlTask, scssTask, jstask),
+    parallel(scssTask, jstask),
     imgTask,
     cacheBustTask,
-    // watchTask
+    watchTask
 );
