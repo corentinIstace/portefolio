@@ -47,7 +47,7 @@ header {
         flex-direction: column;
         align-items: center;
         position: fixed;
-        top: 500px;
+        top: 350px;
         left: 15px;
 
         hr.vertical{
@@ -115,18 +115,18 @@ header {
             // ------------------------------ PROJECTS PART ------------------------------ //
 
 #projects-container{
-    justify-content: center;
+    justify-content: left;
     display: grid;
-    grid-template-columns: repeat(3, 500px);
-    grid-template-rows: repeat(2, 500px);
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(2, 450px);
 }
 .project{
     text-align: center;
     background-color: #292b2e;
     border:2px solid rgb(70, 68, 66);
     border-radius: 10px;
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 400px;
     h3{
         font-size: 2em;
     }
