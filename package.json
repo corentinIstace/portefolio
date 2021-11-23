@@ -29,6 +29,7 @@
     "node-sass": "^6.0.1"
   },
   "dependencies": {
+    "gulp-html": "^3.5.0",
     "gulp-image": "^6.2.1",
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "^8.0.0",
