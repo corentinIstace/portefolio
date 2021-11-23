@@ -13,7 +13,7 @@ const webp = require('gulp-webp');
 const files = {
     scssPath: 'scss/**/*.scss',
     JsPath: 'js/**/*.js',
-    imgPath: 'img/*.{jpg, png}',
+    imgPath: 'img/*',
 }
 
 function scssTask(){
