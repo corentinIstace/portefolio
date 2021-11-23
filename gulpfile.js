@@ -9,8 +9,11 @@ const sass = require ('gulp-sass')(require('node-sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require ('gulp-uglify');
 const webp = require('gulp-webp');
+const validator = require('gulp-html');
+
 
 const files = {
+    htmlPath:"index.html",
     scssPath: 'scss/**/*.scss',
     JsPath: 'js/**/*.js',
     imgPath: 'img/*',
@@ -25,6 +28,12 @@ function scssTask(){
         .pipe(dest('gulp')
     );
 }
+
+function htmlTask(){
+  return gulp.src(files.htmlPath)
+    .pipe(validator())
+    .pipe(gulp.dest('gulp/index.html'));
+};
 
 function jstask(){
     return src (files.JsPath)
@@ -47,15 +56,15 @@ function cacheBustTask(){
 }
 
 function watchTask(){
-    watch([files.scssPath, files.JsPath, files.imgPath],
-    parallel(scssTask, jstask));
+    watch([files.htmlPath, files.scssPath, files.JsPath, files.imgPath],
+    parallel(htmlTask, scssTask, jstask));
 
     watch([files.imgPath], 
     series(imgTask));
 }
 
 exports.default = series(
-    parallel(scssTask, jstask),
+    parallel(htmlTask, scssTask, jstask),
     imgTask,
     cacheBustTask,
     // watchTask
