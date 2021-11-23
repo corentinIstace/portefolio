@@ -9,6 +9,16 @@ body{
     color: white;
     margin: 0px;
 }
+.part{
+    padding: 30px 90px;
+}
+.part-title{
+    color: #4f5b66;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+            // ------------------------------ HOME PART ------------------------------ //
 
 header {
     overflow: hidden;
@@ -58,21 +68,6 @@ header {
         color: rgb(241, 218, 12);
     }
 }    
-// #navbar{
-//     background-color: rgba(79,91,102,0.3);
-//     z-index: 1;
-// }    
-#icon{
-    font-size: 25px;
-    position: fixed;
-    right: 30px;
-    top: 45px;
-    padding: 20px 30px;
-    color:yellow;
-    }
-#icon :active{
-    color:rgb(241, 169, 12);
-}
 #home{
     background: center bottom no-repeat url("../gulp/img/nature2.webp");
     z-index: 0;
@@ -82,8 +77,20 @@ header {
     width: 100%;
     height: 100vh;
 
-    #home-button{
+    button{
         margin: auto;
+        background-color:rgb(98, 13, 155);
+        width: 150px;
+        height: 50px;
+        border: 1px, solid gray;
+        border-radius: 50px;
+
+        a{
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
     }
 }
 #home-title{
@@ -97,51 +104,70 @@ header {
         text-align: center;
     }
 }
-.part{
-    padding: 30px 90px;
+
+            // ------------------------------ ABOUT PART ------------------------------ //
+
+#about-container{
+    display: flex;
+    flex-direction: row;
 }
-.part-title{
-    color: #4f5b66;
-    font-size: 2em;
-    margin-bottom: 30px;
-}
+
+            // ------------------------------ PROJECTS PART ------------------------------ //
+
 #projects-container{
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(2, 500px);
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(3, 500px);
 }
 .project{
     text-align: center;
     background-color: #292b2e;
-    border:2px solid rgb(241, 169, 12);
+    border:2px solid rgb(70, 68, 66);
     border-radius: 10px;
-    width: 300px;
+    width: 450px;
     height: 400px;
     h3{
         font-size: 2em;
     }
 }
 .project:hover{
-    transform: translate(20px,-20px);
-    box-shadow: 0px 0px 20px 10px #dcdcdc;
+    border:2px solid rgb(241, 169, 12);
+    transform: scale3d(1.1, 1.1, 1.1);
+    box-shadow: -5px 5px 10px 10px #000000;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+            // ------------------------------ CONTACT PART ------------------------------ //
+#contact, footer{
+    background-color: black;
+    display: block;
 }
 #contacts-container{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+}
+#contacts-container-left, #contacts-container-right{
+    width: 50%;
+}
+#contacts-container-left{
+    padding-left: 60px;
 }
 .contact-box{
-    background-color: #292b2e;
+    background-color: #292b2e05;
     text-align: center;
+    margin: 20px;
+    padding: 10px;
     width: 250px;
-    padding: 15px 0px;
-    border-right: 2px solid rgb(241, 169, 12);
-    border-top: 0.5px solid rgb(241, 169, 12);
-    border-bottom: 2px solid rgb(241, 169, 12);
-    border-left: 0.5px solid rgb(241, 169, 12);
-    border-radius: 45px 0px 45px 0px;    
+    border-right: 0.7px solid rgb(241, 169, 12);
+    border-bottom: 0.7px solid rgb(241, 169, 12);
+    border-radius: 45px 0px 45px;    
     h4{
         color: #4f5b66;
+        font-size: 1.2em;
         margin-top: 5px;
     }
     svg{
@@ -150,8 +176,22 @@ header {
     a{
         color: white;
         text-decoration: none;
+        font-size: 1.2em;
     }
+}
+.contact-box:hover{
+    transform: translateX(70px);
+    background-color: rgb(167,173,186);
+}
+
+#contacts-container-right{
+    text-align: center;
+    padding-top: 240px;
 }
 footer{
     text-align: center;
+    p{
+        margin: 0;
+        padding: 20px 0px;
+    }
 }
