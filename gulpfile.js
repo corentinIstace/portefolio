@@ -67,5 +67,5 @@ exports.default = series(
     cacheBustTask,
     imgTask,
     svgTask,
-    // watchTask
+    watchTask
 );
