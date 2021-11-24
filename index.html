@@ -33,7 +33,7 @@
                 <h1>Corentin Istace</h1>
                 <h2>A motivate junior Front-End web developer</h2>
             </div>
-            <button id="home-button"><a href="#contact">Call me </a></button>
+            <button id="home-button" onclick="document.location='#contact'">Call me</button>
         </section>
 
         <section class="part" id="about">
@@ -42,7 +42,11 @@
             </div>
             <div id="about-container">
                 <img src="./gulp/img/linkedin.webp" alt="photo de moi">
-                <p>text sur moi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aliquid dicta aliquam quidem possimus magni quos quae culpa quas? Modi dicta, sint est sequi totam quasi tempora optio inventore autem?</p>
+                <div id="about-text">
+                    <p>I have very good knowledge about HTML5, CSS3, SASS, Git and Github,</p>
+                    <p>Good Knowledge about Javascript, PHP, Wordpress,</p>
+                    <p>Basics Knowledge about React, Parcel, Gulp, Docker.</p>
+                </div>
             </div>
         </section>
 
@@ -52,61 +56,81 @@
             </div>
             <div id="projects-container">
                 <article class="project project1">
-                    <h3 class="project-title">Dj's project</h3>
-                    <a href="">See this project.</a>
+                    <h3 class="project-title">Dj's project</h3>                    
                     <P>Made with HTML - CSS </P>   
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
                         <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
                     </div>
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/dj-project" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="https://corentinistace.github.io/dj-project/" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
+                    </div>
                 </article>
                 <article class="project project2">
-                    <h3 class="project-title">This portfolio</h3>
-                    <a href="">See this project.</a>
+                    <h3 class="project-title">This portfolio</h3>                    
                     <P>Made with HTML - Sass - Javascript - Gulp</P>   
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
-                        <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
-                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo CSS  non-officiel">
+                        <i class="fab fa-sass"></i>
+                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo javascript non-officiel">
+                        <i class="fab fa-gulp"></i>
+                    </div>
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/portefolio" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="https://corentinistace.github.io/portefolio/" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
                     </div>
                 </article>
-
                 <article class="project project3">
-                    <h3 class="project-title">Happy Street</h3>
-                    <a href="">See this project.</a>
+                    <h3 class="project-title">Happy Street</h3>                    
                     <P>Made with HTML - CSS - Javascript</P>  
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
                         <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
-                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo CSS  non-officiel">
+                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo javascript non-officiel">
+                    </div>
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/Hackaton" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
+                    </div>
                 </article>
                 <article class="project project4">
                     <h3 class="project-title">weather app</h3>
-                    <a href="">See this project.</a>
                     <P>Made with React</P>   
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
-                        <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
-                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo CSS  non-officiel">
+                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo javascript non-officiel">
+                        <i class="fab fa-react"></i>
+                    </div>
+                   <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/weather-app" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="https://619cc0abe34a10e997aaec40--ci-my-weather-app.netlify.app/" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
                     </div>
                 </article>
                 <article class="project project5">
                     <h3 class="project-title">Random number game</h3>
-                    <a href="">See this project.</a>
                     <P>Made with HTML - CSS - Javascript</P>   
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
                         <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
-                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo CSS  non-officiel">
+                        <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo javascript  non-officiel">
+                    </div>
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/jeux" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="https://upbeat-spence-4b1f46.netlify.app/" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
                     </div>
                 </article>
                 <article class="project project6">
                     <h3 class="project-title">Tree Lidge Game</h3>
-                    <a href="">See this project.</a>
                     <P>Mern project</P>   
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
                         <img class="svg" src="./gulp/svg/javascript.svg" alt="svg du logo CSS  non-officiel">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/tree_lidge-game" class="project-link" title="Go to the Github repo"><i class="fas fa-folder" ></i><i class="fas fa-folder-open"></i></a> 
+                        <a href="" title="Watch in the browser"><i class="fas fa-sign-in-alt"></i></a> 
                     </div>
                 </article>
             </div>
