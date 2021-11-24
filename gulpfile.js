@@ -5,7 +5,7 @@ const gulp = require ('gulp');
 const concat = require ('gulp-concat');
 const postcss = require ('gulp-postcss');
 const replace = require ('gulp-replace');
-const sass = require ('gulp-sass')(require('node-sass'));
+const sass = require ('gulp-sass')(require('sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require ('gulp-uglify');
 const webp = require('gulp-webp');
@@ -15,6 +15,7 @@ const files = {
     scssPath: 'scss/**/*.scss',
     JsPath: 'js/**/*.js',
     imgPath: 'img/*',
+    svgPath: 'img/*.svg',
 }
 
 function scssTask(){
@@ -39,6 +40,12 @@ function imgTask(){
         .pipe(webp({quality: 100}))
         .pipe(gulp.dest('gulp/img'))
 }
+
+function svgTask(){
+    return gulp.src(files.svgPath)
+        .pipe(webp({quality: 100}))
+        .pipe(gulp.dest('gulp/svg'))
+}
  
 const cbString = new Date().getTime();
 function cacheBustTask(){
@@ -51,13 +58,14 @@ function watchTask(){
     watch([files.scssPath, files.JsPath, files.imgPath],
     parallel(scssTask, jstask));
 
-    watch([files.imgPath], 
-    series(imgTask));
+    watch([files.imgPath, files.svgPath], 
+    series(imgTask, svgTask));
 }
 
 exports.default = series(
     parallel(scssTask, jstask),
     cacheBustTask,
     imgTask,
+    svgTask,
     // watchTask
 );
