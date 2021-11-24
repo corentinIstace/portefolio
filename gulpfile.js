@@ -40,10 +40,10 @@ function imgTask(){
         .pipe(gulp.dest('gulp/img'))
 }
  
-const rString = new Date().getTime();
+const cbString = new Date().getTime();
 function cacheBustTask(){
     return src(['index.html'])
-        .pipe(replace(/cb=\d+/g, 'rs=' + rString))
+        .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
         .pipe(dest('gulp/.'))
 }
 
@@ -57,7 +57,7 @@ function watchTask(){
 
 exports.default = series(
     parallel(scssTask, jstask),
-    imgTask,
     cacheBustTask,
-    // watchTask
+    imgTask,
+    watchTask
 );
