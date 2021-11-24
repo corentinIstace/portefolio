@@ -115,7 +115,6 @@ header {
             // ------------------------------ PROJECTS PART ------------------------------ //
 
 #projects-container{
-    justify-content: left;
     display: grid;
     grid-template-columns: repeat(3, 450px);
     grid-template-rows: repeat(2, 450px);
