@@ -1,1 +1,0 @@
-function navbar(){let e=document.getElementById("navbar");"block"===e.style.display?e.style.display="none":e.style.display="block",console.log("ok")}navbar(),mouseOver(),mouseOut();
