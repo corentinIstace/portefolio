@@ -10,7 +10,7 @@ body{
     margin: 0px;
 }
 .part{
-    padding: 30px 90px;
+    padding: 20px 90px;
 }
 .part-title{
     color: #4f5b66;
@@ -18,24 +18,24 @@ body{
     margin-bottom: 30px;
 }
 a:hover{
-    color: rgb(241, 218, 12);
+    color: rgb(51, 51, 49);
+    transition: 0.4s ease ;
 }
 
             // ------------------------------ HOME PART ------------------------------ //
 
 header {
-    overflow: hidden;
-    position: relative;
-    margin: 25px 50% 0px 0px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(2, 2, 2, 0.5);
+    z-index: 5;
     ul {
-        // display: block;
-        padding-left: 5rem;
         display: flex;
         li {
             flex-direction: row;
             list-style-type: none;
             padding: 14px 25px;
-            font-size: 34px;
+            font-size: 24px;
         }
         a{
             text-decoration: none;
@@ -64,170 +64,197 @@ header {
     .social{
         font-size: 30px;
         margin: 10px 15px;
+        color: whitesmoke;
     }
     .social:hover{
-        color: rgb(241, 218, 12);
+        color: rgb(51, 51, 49);
+        transition: 0.4s ease ;
     }
 }    
 #home{
-    background: center bottom no-repeat url("../gulp/img/nature2.webp");
-    z-index: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.97),
+                rgba(0,0,0,0.0)),
+                bottom no-repeat url("../gulp/img/nature2.webp");
     background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100vh;
+    z-index: 0;
 
-    button{
-        margin: auto;
-        background-color:rgb(98, 13, 155);
-        width: 150px;
-        height: 50px;
-        border: 1px, solid gray;
-        border-radius: 50px;
-        color: white;
-        font-size: 1.5em;
-        font-weight: bold;
+    #home-title{
+        h1{
+            font-family: 'Raleway', sans-serif;
+            margin-top: 12rem;
+            font-size: 4em;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+    #home-button{
+        text-align: center;
         text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+        line-height: 2rem;
+        color: rgb(128, 124, 124);
+        margin-top: 20rem;
     }
-    button:hover{
+    #home-button:hover{
         cursor: pointer;
-    }
-}
-#home-title{
-    h1{
-        font-family: 'Raleway', sans-serif;
-        text-align: center;
-        padding-top: 10%;
-        font-size: 4em;
-    }
-    h2{
-        text-align: center;
+        transform: translateY(-5px);
+        transition: 0.4s ease ;
     }
 }
 
             // ------------------------------ ABOUT PART ------------------------------ //
 
+#about{
+    background-color: #0b0b0c;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #about-container{
     display: flex;
     flex-direction: row;
+    img{
+        filter: drop-shadow(5px 5px 55px #313030);
+    }
 }
 #about-text{
-    padding-left: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 7vw 0 7vw;
     font-size: larger;
 }
 
             // ------------------------------ PROJECTS PART ------------------------------ //
 
+#projects{
+    background-color: #1a191c;
+}
 #projects-container{
-    display: grid;
-    // justify-content: center;
-    grid-template-columns: repeat(3, 450px);
-    grid-template-rows: repeat(2, 500px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
+
 }
 .project{
-    text-align: center;
     background-color: #292b2e;
-    border:2px solid rgb(70, 68, 66);
+    border: 1px solid rgb(70, 68, 66);
+    justify-content: space-between;
+    text-align: center;
     border-radius: 10px;
-    width: 350px;
-    height: 450px;
+    min-width: 300px;
+    margin: 2rem;
     h3{
         font-size: 2em;
     }
     p{
         margin-top: 35px;
     }
+    .items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 70px;
+        padding-top: 120px;
+        .svg-mongo{
+            padding-top: 15px;
+        }
+        .svg-express{
+            padding-top: 15px;
+        }
+        .svg-js{
+            padding-top: 15px;
+        }
+        .fa-sass{
+            font-size:3em;
+            padding-top: 20px;
+            color: rgb(335, 13, 79);
+        }
+        .fa-gulp{
+            font-size:3em;
+            padding-top: 20px;
+            width: 65px;
+            color: red;
+        }
+        .fa-php{
+            font-size:3em;
+            padding-top: 20px;
+            color: rgb(31, 95, 233);
+        }
+        .fa-wordpress{
+            font-size:3em;
+            padding-top: 20px;
+            color: rgb(31, 87, 207);
+        }
+        .fa-react{
+            font-size:3em;
+            padding-top: 20px;
+            color: rgb(22, 101, 190);
+        }
+        .fa-node-js{
+            font-size:3em;
+            padding-top: 20px;
+            width: 65px;
+            color: rgb(30, 228, 23);
+        }
+    }
+    .project-link-container{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+        a{
+            color: rgb(192,197,206);
+            font-size: 1.5em;
+        }
+        .project-link-git{
+            &:hover > .fa-folder-open{
+                display: block;
+            }
+            &:hover > .fa-folder{
+                display: none;
+            }
+        }
+        .fa-folder-open{
+            display: none;
+        }
+        .project-link-net{
+            &:hover > .fa-sign-out-alt{
+                display: block;
+            }
+            &:hover > .fa-sign-in-alt{
+                display: none;
+            }
+        }
+        .fa-sign-out-alt{
+            display: none;
+        }
+    }
 }
 .project:hover{
-    border:2px solid rgb(241, 169, 12);
+    border: 1px solid #0085dd;
     transform: scale3d(1.1, 1.1, 1.1);
+    transition: all 0.5s ease ;
     box-shadow: -5px 5px 10px 10px #000000;
-}
-.items{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 70px;
-    padding-top: 120px;
-    .svg-mongo{
-        padding-top: 15px;
-    }
-    .svg-express{
-        padding-top: 15px;
-    }
-    .svg-js{
-        padding-top: 15px;
-    }
-    .fa-sass{
-        font-size:3em;
-        padding-top: 20px;
-        color: rgb(335, 13, 79);
-    }
-    .fa-gulp{
-        font-size:3em;
-        padding-top: 20px;
-        width: 65px;
-        color: red;
-    }
-    .fa-php{
-        font-size:3em;
-        padding-top: 20px;
-        color: rgb(31, 95, 233);
-    }
-    .fa-wordpress{
-        font-size:3em;
-        padding-top: 20px;
-        color: rgb(31, 87, 207);
-    }
-    .fa-react{
-        font-size:3em;
-        padding-top: 20px;
-        color: rgb(22, 101, 190);
-    }
-    .fa-node-js{
-        font-size:3em;
-        padding-top: 20px;
-        width: 65px;
-        color: rgb(30, 228, 23);
-    }
-}
-.project-link-container{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 40px;
-    a{
-        color: rgb(192,197,206);
-        font-size: 1.5em;
-    }
-}
-.project-link-git{
-    &:hover > .fa-folder-open{
-        display: block;
-    }
-    &:hover > .fa-folder{
-        display: none;
-    }
-}
-.fa-folder-open{
-    display: none;
-}
-.project-link-net{
-    &:hover > .fa-sign-out-alt{
-        display: block;
-    }
-    &:hover > .fa-sign-in-alt{
-        display: none;
-    }
-}
-.fa-sign-out-alt{
-    display: none;
 }
             // ------------------------------ CONTACT PART ------------------------------ //
 
 #contact, footer{
-    background-color: black;
-    display: block;
+    background-color: #0b0b0c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact{
+    height: 90vh;
 }
 #contacts-container{
     display: flex;
@@ -237,24 +264,21 @@ header {
     width: 50%;
 }
 #contacts-container-left{
-    padding-left: 60px;
+    padding-left: 50px;
 }
 .contact-box{
-    background-color: #292b2e05;
+    background-color: rgba(255,255,255,0.06);
+    border-right: 0.7px solid #0085dd;
+    border-bottom: 0.7px solid #0085dd;
+    border-radius: 45px 0px 45px;    
     text-align: center;
     margin: 20px;
     padding: 10px;
     width: 250px;
-    border-right: 0.7px solid rgb(241, 169, 12);
-    border-bottom: 0.7px solid rgb(241, 169, 12);
-    border-radius: 45px 0px 45px;    
     h4{
         color: #4f5b66;
         font-size: 1.2em;
         margin-top: 5px;
-    }
-    svg{
-        color:rgb(98, 13, 155);
     }
     a{
         color: white;
@@ -263,8 +287,12 @@ header {
     }
 }
 .contact-box:hover{
-    transform: translateX(70px);
+    transform: translateX(30px);
+    transition: all 1s ease;
     background-color: rgb(167,173,186);
+    a{
+        color: #0085dd;
+    }
 }
 
 #contacts-container-right{
@@ -275,20 +303,15 @@ header {
 }
 #contacts-container-right-button{
     display: flex;
-    button{
-        margin: auto;
-        background-color:rgb(98, 13, 155);
-        width: 150px;
-        height: 50px;
-        border: 1px, solid gray;
+    justify-content: space-evenly;
+    a{
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #0085dd;
         border-radius: 50px;
-    
-        a{
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-        }
     }
 }
 footer{
