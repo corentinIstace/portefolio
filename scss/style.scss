@@ -93,16 +93,24 @@ header {
             text-align: center;
         }
     }
-    #home-button{
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2em;
-        line-height: 2rem;
-        color: rgb(128, 124, 124);
+    #home-moreInfo{
         margin-top: 20rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        #home-button{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            line-height: 2rem;
+            color: rgb(128, 124, 124);
+        }
+        .fa-chevron-down{
+            margin: auto;
+            color: rgb(128, 124, 124);
+        }
     }
-    #home-button:hover{
+    #home-moreInfo:hover{
         cursor: pointer;
         transform: translateY(-5px);
         transition: 0.4s ease ;
@@ -210,7 +218,7 @@ header {
     .project-link-container{
         display: flex;
         justify-content: space-around;
-        margin-bottom: 3rem;
+        margin: 3rem 0rem;
         a{
             color: rgb(192,197,206);
             font-size: 1.5em;
