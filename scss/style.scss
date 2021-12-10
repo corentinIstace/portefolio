@@ -41,6 +41,9 @@ header {
             text-decoration: none;
             color: white;
         }
+        #hambIcon {
+            display: none;
+        }
     }
     #link {
         display: flex;
@@ -115,6 +118,22 @@ header {
         transform: translateY(-5px);
         transition: 0.4s ease ;
     }
+    #home-link{
+        float: right;
+        position: fixed;
+        margin-top: 40rem;
+        margin-left: 77rem;  
+        a{
+            background-color: rgba(37, 31, 31, 0.3);
+            color: white;
+            border-radius: 50%;
+            font-size: larger;
+            padding: 1.5em;
+        }
+        a:hover{
+            background-color: rgba(37, 31, 31, 1);  
+        }
+    }
 }
 
             // ------------------------------ ABOUT PART ------------------------------ //
@@ -139,6 +158,7 @@ header {
     justify-content: center;
     margin: 0 7vw 0 7vw;
     font-size: larger;
+    line-height: 2em;
 }
 
             // ------------------------------ PROJECTS PART ------------------------------ //
@@ -330,3 +350,138 @@ footer{
     }
 }
 
+@media only screen and (max-width: 450px) {
+
+.part {
+    padding: 20px 30px;
+}
+.part-title{
+    color: #4f5b66;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+header{
+    background-color: transparent;
+    #navbar{
+        ul{
+            display: none;
+        }
+    }
+    #navbar.active {
+        display: block;
+        position: fixed;
+        flex-direction: column;
+        background-color: black;
+        opacity: 70%;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 0;
+        ul{
+            display: block;
+        }
+        li {
+            margin:1.5rem 0;
+        }
+    }
+    #hambIcon {
+        color: white;
+        font-size: 20px;
+        margin: 25px 15px;
+        display: block;
+        cursor: pointer;
+        width: 25px;
+    }
+    #link {
+        opacity:0;
+        position: fixed;
+        top: 363px;
+        left: 10px;
+        hr.vertical {
+            border: 0;
+            border-right-color: currentcolor;
+            border-right-style: none;
+            border-right-width: 0px;
+            border-right: 1px dashed #fff;
+            color: #fff;
+            height: 35px;
+            width: 2px;
+        }
+        svg {
+            font-size: 20px;
+        }
+    } 
+    #link.active{
+        opacity: 1;
+        top: 45px;
+        left: 350px
+    }
+}
+}
+#home{
+    #home-moreInfo{
+        margin-top: 11rem;
+    }
+    #home-title{
+        h1 {
+            font-size: 2em;
+            margin-top: 16rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1em;
+            text-align: center;
+            padding: 1em;
+        }
+    }
+    #home-button{
+        margin-top: 100px;
+    }
+}
+#about{
+    height: auto;
+} 
+#about-container{
+    display: flex;
+    flex-direction: column;
+    img{
+        margin: auto;
+        width: 150px;
+        height: 200px;
+    }
+    #about-text {
+        text-align: left;
+        font-size: 1em;
+        line-height: 1em;
+    }
+}
+.project{
+    min-width: 227px;
+}
+#contacts-container {
+    display: flex;
+    flex-direction: column;
+}
+#contacts-container-left{
+    padding: 0;
+    width: 100%;
+    .contact-box{
+        background-color: #c5cad5;
+    }
+}
+#contacts-container-right{
+    width: 100%;
+    h3 {
+        font-size: 1.5em;
+    }
+} 
+#contacts-container-right-button a {
+    background-color: #0085dd;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px 31px;
+    text-decoration: none;
+
+}
