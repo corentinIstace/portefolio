@@ -29,6 +29,11 @@ header {
     position: fixed;
     background-color: rgba(2, 2, 2, 0.5);
     z-index: 5;
+    #navbar{
+        .svg-inline--fa {
+            display: none;
+        }
+    }
     ul {
         display: flex;
         li {
@@ -40,9 +45,6 @@ header {
         a{
             text-decoration: none;
             color: white;
-        }
-        #hambIcon {
-            display: none;
         }
     }
     #link {
@@ -350,6 +352,8 @@ footer{
     }
 }
 
+            // ------------------------------ MEDIA QUERIES ------------------------------ //
+
 @media only screen and (max-width: 450px) {
 
 .part {
@@ -362,6 +366,11 @@ footer{
 }
 header{
     background-color: transparent;
+    #navbar{
+        .svg-inline--fa {
+            display: none;
+        }
+    }
     #navbar{
         ul{
             display: none;
@@ -417,7 +426,7 @@ header{
         left: 350px
     }
 }
-}
+
 #home{
     #home-moreInfo{
         margin-top: 11rem;
@@ -430,13 +439,13 @@ header{
         }
         h2 {
             font-size: 1em;
-            text-align: center;
-            padding: 1em;
         }
+        text-align: center;
+        padding: 1em;
     }
-    #home-button{
-        margin-top: 100px;
-    }
+}
+#home-button{
+    margin-top: 100px;
 }
 #about{
     height: auto;
@@ -462,15 +471,16 @@ header{
     display: flex;
     flex-direction: column;
 }
+#contacts-container-left, #contacts-container-right{
+    width: 100%;
+}
 #contacts-container-left{
     padding: 0;
-    width: 100%;
     .contact-box{
         background-color: #c5cad5;
     }
 }
 #contacts-container-right{
-    width: 100%;
     h3 {
         font-size: 1.5em;
     }
@@ -482,6 +492,6 @@ header{
     font-size: 1em;
     font-weight: 700;
     padding: 10px 31px;
-    text-decoration: none;
-
+    text-decoration: none;   
+}
 }
