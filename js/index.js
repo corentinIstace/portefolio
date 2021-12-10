@@ -1,31 +1,39 @@
-// // function navbar(){
-// //     let menu = document.getElementById("navbar");
-// //         if (menu.style.display === "block") {
-// //             menu.style.display = "none";
-// //         } else {
-// //             menu.style.display = "block";
-// //             // menu.style.background = "rgba(79,91,102,0.5)";
-// //         }
-// //         console.log("ok");
-// // };
+const hamburger = document.querySelector("#hambIcon");
+const socialMenu = document.querySelector("#link");
+const navMenu = document.querySelector("#navbar");
 
-// let link = document.querySelectorAll(".project-link");
-// let oldIcon = `<ion-icon name="folder-outline"></ion-icon>`;
-// let newIcon = `<ion-icon name="folder-open-outline"></ion-icon>`;
+hamburger.addEventListener("click", mobileMenu);
 
-// function iconsHover(){
-//     link.innerHTML = oldIcon;
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    socialMenu.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    console.log("ok");
+};
 
-//     // for (let i=0; i < link.length; i++){
-//     //     link[i].innerHTML = oldIcon;
-//     // };
+const navLink = document.querySelectorAll("li");
 
-//     for (let i=0; i < link.length; i++){
-//         link[i].addEventListener("mouseover",function(){
-//             link.innerHTML = newIcon;
-//         });
-//     };
-// };
+navLink.forEach(l => l.addEventListener("click", closeMenu));
 
-// iconsHover();
-// // navbar();
+function closeMenu() {
+    hamburger.classList.remove("active");
+    socialMenu.classList.toggle("active");
+    navMenu.classList.remove("active");
+};
+
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            let hash = this.hash;
+            
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){     
+                window.location.hash = hash;
+            });
+        }
+    });
+});
+
+
