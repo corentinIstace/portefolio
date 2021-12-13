@@ -15,7 +15,7 @@ const files = {
     scssPath: 'scss/**/*.scss',
     JsPath: 'js/**/*.js',
     imgPath: 'img/*',
-    svgPath: 'img/*.svg',
+    svgPath: 'svg/*',
 }
 
 function scssTask(){
