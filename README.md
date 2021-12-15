@@ -30,9 +30,9 @@ Gulp:
 
 Git and Github:
 
-create repository and work on it
+- create repository and work on it
 
-You can find the website with this link:
+You can find the website with this link:  
 
 https://corentinistace.github.io/portefolio/
 
@@ -40,7 +40,7 @@ https://corentinistace.github.io/portefolio/
 
 Corentin Istace
 
-E-mail: corentinistace1@gmail.com
-Github: https://github.com/corentinIstace
-Linkedin: https://www.linkedin.com/in/corentin-istace/
+E-mail: corentinistace1@gmail.com  
+Github: https://github.com/corentinIstace  
+Linkedin: https://www.linkedin.com/in/corentin-istace/  
 
