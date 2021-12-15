@@ -1,19 +1,8 @@
 # portefolio
 
-Project done by Corentin and Jérémie Lopopola About the project :
+Project done by Corentin Istace.
 
-The objective was to create a static site for a DJ, based on reference photos, responsive (desktop, tablet, and mobile sizes), with some animations and a burger menu.
-
-It's create for my BeCode formation for learning the principles of:
-
-- HTML
-- SASS
-- Responsive web design
-- Javascript
-- Gulp
-- Using GIT and Github
-
-Objectives
+## Objectives
 
 Create my portfolio for showing my projects to companies.
 
@@ -46,7 +35,8 @@ create repository and work on it
 You can find the website with this link:
 
 https://corentinistace.github.io/portefolio/
-Contact
+
+## Contact
 
 Corentin Istace
 
