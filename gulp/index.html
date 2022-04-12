@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="stylesheet" href="./gulp/style.css?cb=1638367353725">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./gulp/style.css?cb=1649761867733">
     <title>Corentin Istace - Portfolio</title>
 </head>
 <body>
@@ -19,8 +20,8 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <a href="javascript:void(0)" id="hambIcon"><i class="fa fa-bars"></i></a>
                 </nav>
-                <!-- <a href="javascript:void(0)" id="icon" onclick="navbar()"><i class="fa fa-bars"></i></a> -->
                 <div id="link">
                     <hr class="vertical">
                     <a href="https://www.facebook.com/corentin.istace.7/" target="blank"><i class="social fab fa-facebook-square"></i></a>
@@ -31,28 +32,41 @@
             </header>
             <div id="home-title">
                 <h1>Corentin Istace</h1>
-                <h2>A motivate junior Front-End web developer</h2>
+                <h2>A motivated junior Front-End web developer</h2>
             </div>
-            <button id="home-button" onclick="document.location='#contact'">Call me</button>
+            <div id="home-moreInfo">
+                <a id="home-button" href="#about">Know more about me <br>
+                <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div id="home-link">
+                <a href="#home"><i class="fas fa-arrow-up"></i></a> 
+            </div>
         </section>
 
         <section class="part" id="about">
             <div class="part-title">
-                <h3>About me ~</h3>
+                <h3>About me </h3>
+                 <hr style="width:25%;margin-left:0;color: grey;"> 
             </div>
             <div id="about-container">
-                <img src="./gulp/img/linkedin.webp" alt="photo de moi">
                 <div id="about-text">
+                    <p>My name is corentin, I am 24 years old and I am from Bastogne.
+                        After 2 years in the security sector I decided to retrain in the development field.<br>
+                        My professional experience allowed me to acquire rigor and autonomy as well as a good team spirit.
+                        I am looking for a family business where I could highlight my human qualities and improve my knowledge
+                        by participating in the realization of projects.</p>
                     <p>I have very good knowledge about HTML5, CSS3, SASS, Git and Github,</p>
                     <p>Good Knowledge about Javascript, PHP, Wordpress,</p>
                     <p>Basics Knowledge about React, Parcel, Gulp, Docker.</p>
                 </div>
+                <img src="./gulp/img/linkedin.webp" alt="photo de moi">
             </div>
         </section>
 
         <section class="part" id="projects">
             <div class="part-title">
-                <h3>Projects ~</h3>
+                <h3>Projects </h3>
+                 <hr style="width:25%;margin-left:0;color: grey;"> 
             </div>
             <div id="projects-container">
                 <article class="project project1">
@@ -63,17 +77,36 @@
                     </div>
                     <P>Made with HTML - CSS </P>   
                     <div class="project-link-container">
-                        <a href="https://github.com/corentinIstace/dj-project" class="project-link-git" title="Go to the Github repo">
+                        <a href="https://github.com/corentinIstace/dj-project" class="project-link-git" target="blank" title="Go to the Github repo">
                             <i class="fas fa-folder"></i>
                             <i class="fas fa-folder-open"></i>
                         </a> 
-                        <a href="https://corentinistace.github.io/dj-project/" class="project-link-net" title="Watch in the browser">
+                        <a href="https://corentinistace.github.io/dj-project/" class="project-link-net" target="blank" title="Watch in the browser">
                             <i class="fas fa-sign-in-alt"></i>
                             <i class="fas fa-sign-out-alt"></i>
                         </a> 
                     </div>
                 </article>
                 <article class="project project2">
+                    <h3 class="project-title">Character manage</h3>
+                    <div class="items">
+                        <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
+                        <i class="fab fa-sass"></i>
+                        <img class="svg svg-js" src="./gulp/svg/javascript.svg" alt="svg du logo javascript  non-officiel">
+                    </div>
+                    <P>Made with HTML - CSS - Javascript</P>   
+                    <div class="project-link-container">
+                        <a href="https://github.com/corentinIstace/character-manage.js" class="project-link-git" target="blank" title="Go to the Github repo">
+                            <i class="fas fa-folder"></i>
+                            <i class="fas fa-folder-open"></i>
+                        </a> 
+                        <a href="https://corentinistace.github.io/character-manage.js/" class="project-link-net" target="blank" title="Watch in the browser">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a> 
+                    </div>
+                </article>
+                <article class="project project3">
                     <h3 class="project-title">This portfolio</h3>                    
                     <div class="items">
                         <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
@@ -83,29 +116,11 @@
                     </div>
                     <P>Made with HTML - Sass - Javascript - Gulp</P>   
                     <div class="project-link-container">
-                        <a href="https://github.com/corentinIstace/portefolio" class="project-link-git" title="Go to the Github repo">
+                        <a href="https://github.com/corentinIstace/portefolio" class="project-link-git" target="blank" title="Go to the Github repo">
                             <i class="fas fa-folder"></i>
                             <i class="fas fa-folder-open"></i>
                         </a> 
-                        <a href="https://corentinistace.github.io/portefolio/" class="project-link-net" title="Watch in the browser">
-                            <i class="fas fa-sign-in-alt"></i>
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a> 
-                    </div>
-                </article>
-                <article class="project project3">
-                    <h3 class="project-title">P.I.L project</h3>                    
-                    <div class="items">
-                        <i class="fab fa-php"></i>
-                        <i class="fab fa-wordpress"></i>
-                    </div>
-                    <P>Made with PHP - Wordpress</P>  
-                    <div class="project-link-container">
-                        <a href="" class="project-link-git" title="Go to the Github repo">
-                            <i class="fas fa-folder"></i>
-                            <i class="fas fa-folder-open"></i>
-                        </a> 
-                        <a href="" class="project-link-net" title="Watch in the browser">
+                        <a href="https://corentinistace.github.io/portefolio/" class="project-link-net" target="blank" title="Watch in the browser">
                             <i class="fas fa-sign-in-alt"></i>
                             <i class="fas fa-sign-out-alt"></i>
                         </a> 
@@ -118,52 +133,27 @@
                     </div>
                     <P>Made with React</P>   
                     <div class="project-link-container">
-                        <a href="https://github.com/corentinIstace/weather-app" class="project-link-git" title="Go to the Github repo">
+                        <a href="https://github.com/corentinIstace/weather-app" class="project-link-git" target="blank" title="Go to the Github repo">
                             <i class="fas fa-folder"></i>
                             <i class="fas fa-folder-open"></i>
                         </a> 
-                        <a href="https://61a10181a4ef52000799db8c--ci-my-weather-app.netlify.app/" class="project-link-net" title="Watch in the browser">
+                        <a href="https://61a10181a4ef52000799db8c--ci-my-weather-app.netlify.app/" class="project-link-net" target="blank" title="Watch in the browser">
                             <i class="fas fa-sign-in-alt"></i>
                             <i class="fas fa-sign-out-alt"></i>
                         </a> 
                     </div>
                 </article>
                 <article class="project project5">
-                    <h3 class="project-title">Random number game</h3>
+                    <h3 class="project-title">P.I.L project</h3>                    
                     <div class="items">
-                        <img class="svg" src="./gulp/svg/html5-01.svg" alt="svg du logo HTML5 non-officiel">
-                        <img class="svg" src="./gulp/svg/css3-01.svg" alt="svg du logo css non-officiel">
-                        <img class="svg svg-js" src="./gulp/svg/javascript.svg" alt="svg du logo javascript  non-officiel">
+                        <i class="fab fa-php"></i>
+                        <i class="fab fa-wordpress"></i>
                     </div>
-                    <P>Made with HTML - CSS - Javascript</P>   
+                    <P>Made with PHP - Wordpress</P>  
                     <div class="project-link-container">
-                        <a href="https://github.com/corentinIstace/jeux" class="project-link-git" title="Go to the Github repo">
+                        <a href="https://github.com/corentinIstace/PIL-project" class="project-link-git" target="blank" title="Go to the Github repo">
                             <i class="fas fa-folder"></i>
                             <i class="fas fa-folder-open"></i>
-                        </a> 
-                        <a href="https://upbeat-spence-4b1f46.netlify.app/" class="project-link-net" title="Watch in the browser">
-                            <i class="fas fa-sign-in-alt"></i>
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a> 
-                    </div>
-                </article>
-                <article class="project project6">
-                    <h3 class="project-title">Tree Lidge Game</h3>
-                    <div class="items">
-                        <img class="svg-mongo" src="./img/MongoDB.svg" alt="svg du logo mongoDB non-officiel">
-                        <img class="svg-express" src="./img/expressjslogo.svg" alt="svg du logo express non-officiel">
-                        <i class="fab fa-react"></i>
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <P>Mern project</P>   
-                    <div class="project-link-container">
-                        <a href="https://github.com/corentinIstace/tree_lidge-game" class="project-link-git" title="Go to the Github repo">
-                            <i class="fas fa-folder"></i>
-                            <i class="fas fa-folder-open"></i>
-                        </a> 
-                        <a href="" class="project-link-net" title="Watch in the browser">
-                            <i class="fas fa-sign-in-alt"></i>
-                            <i class="fas fa-sign-out-alt"></i>
                         </a> 
                     </div>
                 </article>
@@ -172,7 +162,8 @@
         
         <section class="part" id="contact">
             <div class="part-title">
-                <h3>Contact ~</h3>
+                <h3>Contact</h3>
+                 <hr style="width:25%;margin-left:0;color:grey;"> 
             </div>
             <section id="contacts-container">
                 <div id="contacts-container-left">
@@ -186,10 +177,10 @@
                     </article>
                 </div>
                 <div id="contacts-container-right">
-                <h3>Do you want to know more about my Knoledge ?</h3>
+                <h3>Do you want to know more about my Knowledge ?</h3>
                 <div id="contacts-container-right-button">
-                    <button><a href="./gulp/img/CV-Corentin Istace.pdf" target="_blank">Take a look</a></button>
-                    <button><a href="./gulp/img/CV-Corentin Istace.pdf" download="CV-Corentin_Istace.pdf" target="_blank">Keep it</a></button>
+                    <a href="./gulp/img/Corentin Istace CV.pdf" target="_blank" title="watch my CV">Take a look</a>
+                    <a href="./gulp/img/Corentin Istace CV.pdf" target="_blank" title="download my CV" download="Corentin Istace CV.pdf" >Keep it</a>
                 </div>
                 </div>
             </section>
@@ -200,6 +191,6 @@
             <p><i class="far fa-copyright"></i> made by Corentin Istace</p>
         </div>
     </footer>
-    <script src="./gulp/concat.js?cb=1638367353725"></script>
+    <script src="./gulp/concat.js?cb=1649761867733"></script>
 </body>
 </html>
